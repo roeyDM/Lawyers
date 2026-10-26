@@ -41,5 +41,7 @@ export interface LegalCase {
   assigned_to: string | null;
   signed_agreement_url: string | null;
   fee_contract_url: string | null;
+  is_direct_lead?: boolean | null;
+  call_notes?: string | null;
   created_at?: string;
 }

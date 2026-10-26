@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Scale, Briefcase, PlusCircle } from "lucide-react";
+import { Scale, Briefcase, PlusCircle, Headphones } from "lucide-react";
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -40,6 +40,18 @@ export default function Navbar() {
           >
             <Briefcase className="h-4 w-4" />
             <span>פיד תיקים</span>
+          </Link>
+
+          <Link
+            href="/admin/leads"
+            className={`flex items-center gap-2 rounded-lg px-3.5 py-2 text-sm font-medium transition-colors ${
+              pathname?.startsWith("/admin/leads")
+                ? "bg-slate-100 text-slate-900 font-semibold"
+                : "text-slate-600 hover:bg-slate-50 hover:text-slate-900"
+            }`}
+          >
+            <Headphones className="h-4 w-4" />
+            <span>ניהול לידים</span>
           </Link>
 
           <Link
